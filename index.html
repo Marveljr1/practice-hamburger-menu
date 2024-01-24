@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger Menu</title>
+    <style>
+        body{
+            background: #333;
+        }
+        #nav{
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+            right: -250px;
+            top: 0;
+            background-color: red;
+            transition: 0.5s;
+        }
+        #nav ul li{
+            list-style: none;
+            margin: 50px 20px;
+            color: white;
+        }
+        #menubtn{
+            width: 50px;
+            position: fixed;
+            right: 65px;
+            top: 35px;
+        }
+        img{
+            size: 100px;
+        }
+    </style>    
+</head>
+<body>
+    <div id="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Contact us</li>
+        </ul>
+<img src="margherita.jpg" alt="" class="menubtn">        
+    </div>
+    <script>
+var menubtn = document.getElementById("menubtn")
+var nav = document.getElementById("nav")
+
+nav.style.right = "-250px"
+menubtn.onclick = function(){
+    if(nav.style.right == "-250px"){
+        nav.style.right = "0";
+    }
+    else{
+        nav.style.right = "-250px"
+    }
+
+}
+    </script>
+</body>
+</html>
